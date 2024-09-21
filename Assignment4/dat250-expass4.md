@@ -10,7 +10,7 @@ Another issue arose with the NullPointerException in the Hibernate boot process.
 
 Here is the link to the code for Experiment 2, which includes the necessary test cases that now pass:
 
-[Experiment 2 Code](#) *(Note: Replace with actual link to your repository)*
+https://github.com/r4f4777/Assignment-2---DAT250/tree/main/Assignment4/dat250-jpa-tutorial-master/dat250-jpa-tutorial-master
 
 ## Database Table Inspection
 
