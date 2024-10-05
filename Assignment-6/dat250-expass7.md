@@ -29,18 +29,17 @@ Make sure to check the respective directories for each experiment:
 ## Screenshots
 
 ### Experiment 1: Hello World
-![Experiment 1](./experiment1.png)
+![experiment1_screenshot](https://github.com/user-attachments/assets/cbb015f2-178f-463c-b2cd-792b8c757734)
 
 ### Experiment 2: Work Queues
-![Experiment 2](./experiment2.png)
+![experiment2_screenshot](https://github.com/user-attachments/assets/3dc98435-5a39-46ad-9552-742e8ace43da)
 
 ### Experiment 3: Publish/Subscribe
-![Experiment 3 - Step 1](./experiment3_1.png)
-![Experiment 3 - Step 2](./experiment3_2.png)
+![experiment3_screenshot](https://github.com/user-attachments/assets/df072109-e9e3-4a89-be38-0bd123723f44)
 
 ### Experiment 4: Topics
-![Experiment 4 - Step 1](./experiment4_1.png)
-![Experiment 4 - Step 2](./experiment4_2.png)
+![experiment4_screenshot1](https://github.com/user-attachments/assets/326e0606-af1b-4d51-a1af-6a3f02a5596e)
+![experiment4_screenshot2](https://github.com/user-attachments/assets/34bcd11a-ebc6-4389-81d7-527e1fbd8c6f)
 
 ## Pending Issues
 
