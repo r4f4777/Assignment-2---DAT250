@@ -1,5 +1,5 @@
-#Experiment 1: Hello World
-#Send.java
+# Experiment 1: Hello World
+# Send.java
 package com.example.rabbitmq;
 
 import com.rabbitmq.client.Channel;
@@ -22,9 +22,8 @@ public class Send {
     }
 }
 
-#Recv.java
+# Recv.java
 package com.example.rabbitmq;
-
 import com.rabbitmq.client.*;
 
 public class Recv {
@@ -47,11 +46,10 @@ public class Recv {
     }
 }
 
-#Experiment 2: Work Queues
+# Experiment 2: Work Queues
 
-#NewTask.java
+# NewTask.java
 package com.example.rabbitmq;
-
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -59,7 +57,6 @@ import com.rabbitmq.client.MessageProperties;
 
 public class NewTask {
     private static final String TASK_QUEUE_NAME = "task_queue";
-
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
@@ -77,9 +74,8 @@ public class NewTask {
     }
 }
 
-#Worker.java
+# Worker.java
 package com.example.rabbitmq;
-
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -126,18 +122,16 @@ public class Worker {
     }
 }
 
-#Experiment 3: Publish/Subscribe
+# Experiment 3: Publish/Subscribe
 
-#EmitLog.java
+# EmitLog.java
 package com.example.rabbitmq;
-
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
 public class EmitLog {
     private static final String EXCHANGE_NAME = "logs";
-
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
@@ -153,9 +147,8 @@ public class EmitLog {
     }
 }
 
-#ReceiveLogs.java
+# ReceiveLogs.java
 package com.example.rabbitmq;
-
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -163,7 +156,6 @@ import com.rabbitmq.client.DeliverCallback;
 
 public class ReceiveLogs {
     private static final String EXCHANGE_NAME = "logs";
-
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
@@ -184,11 +176,10 @@ public class ReceiveLogs {
     }
 }
 
-#Experiment 4: Topics
+# Experiment 4: Topics
 
-#EmitLogTopic.java
+# EmitLogTopic.java
 package com.example.rabbitmq;
-
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -212,9 +203,8 @@ public class EmitLogTopic {
     }
 }
 
-#ReceiveLogsTopic.java
+# ReceiveLogsTopic.java
 package com.example.rabbitmq;
-
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -222,7 +212,6 @@ import com.rabbitmq.client.DeliverCallback;
 
 public class ReceiveLogsTopic {
     private static final String EXCHANGE_NAME = "topic_logs";
-
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
