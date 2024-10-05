@@ -18,7 +18,7 @@ During the completion of the RabbitMQ tutorials (Experiments 1-4), several techn
 
 You can find the source code for all four experiments in the following repository:
 
-[**Link to repository**](https://github.com/your-repo/dat250-experiments)
+[**Link to repository**](https://github.com/r4f4777/Assignment-2---DAT250/blob/main/Assignment-6/experiments)
 
 Make sure to check the respective directories for each experiment:
 - **Experiment 1**: Hello World
