@@ -22,7 +22,7 @@ public class Send {
     }
 }
 
-# Recv.java
+### Recv.java
 package com.example.rabbitmq;
 import com.rabbitmq.client.*;
 
@@ -48,7 +48,7 @@ public class Recv {
 
 # Experiment 2: Work Queues
 
-# NewTask.java
+### NewTask.java
 package com.example.rabbitmq;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -74,7 +74,7 @@ public class NewTask {
     }
 }
 
-# Worker.java
+### Worker.java
 package com.example.rabbitmq;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -124,7 +124,7 @@ public class Worker {
 
 # Experiment 3: Publish/Subscribe
 
-# EmitLog.java
+### EmitLog.java
 package com.example.rabbitmq;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -147,7 +147,7 @@ public class EmitLog {
     }
 }
 
-# ReceiveLogs.java
+### ReceiveLogs.java
 package com.example.rabbitmq;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -178,7 +178,7 @@ public class ReceiveLogs {
 
 # Experiment 4: Topics
 
-# EmitLogTopic.java
+### EmitLogTopic.java
 package com.example.rabbitmq;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -203,7 +203,7 @@ public class EmitLogTopic {
     }
 }
 
-# ReceiveLogsTopic.java
+### ReceiveLogsTopic.java
 package com.example.rabbitmq;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
