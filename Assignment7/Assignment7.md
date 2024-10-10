@@ -106,4 +106,60 @@ Upon running the test, we observed the following output in the console, confirmi
 
 ![screenshot1](https://github.com/user-attachments/assets/605a438b-a21d-4844-8f26-1235f7059ce7)
 
+# Dockerizing a Spring Boot Poll Application
+
+## Introduction
+
+This document outlines the steps taken to containerize an existing Spring Boot application (Poll App) as part of Experiment 2. The application provides a REST API for managing polls and vote options, and was successfully containerized using Docker. We utilized a multi-stage build to keep the final Docker image slim and efficient for distribution.
+
+## Prerequisites
+
+- **Docker** installed on your machine.
+- **Gradle** for building the Spring Boot application.
+- **Postman**, **Bruno**, or `curl` to test the API endpoints.
+
+## Dockerfile Explanation
+
+We created a Dockerfile for containerizing the Spring Boot Poll App. The Dockerfile uses a multi-stage build, with the following steps:
+
+1. **Base Image**: We used `gradle:jdk21` for building the project and `eclipse-temurin:21-jdk` for running the final application.
+2. **Build the Application**: We used `gradle bootJar` to compile and package the Spring Boot application.
+3. **Multi-stage Build**: This technique helps reduce the size of the final image by only copying the required JAR file into the final runtime image.
+
+### Dockerfile
+
+# Stage 1: Build the application
+
+FROM gradle:jdk21 AS build
+COPY . /home/gradle/project
+WORKDIR /home/gradle/project
+RUN gradle bootJar
+
+# Stage 2: Runtime
+
+FROM eclipse-temurin:21-jdk AS runtime
+WORKDIR /app
+COPY --from=build /home/gradle/project/build/libs/*.jar app.jar
+CMD ["java", "-jar", "app.jar"]
+
+## Building and Running the Docker Image
+
+To build and run the container, follow these steps:
+Build the Docker image: From the root of your project directory (where the Dockerfile is located), run the following command:
+docker build -t springboot-pollapp .
+
+Run the Docker container: Once the image is built, you can run it using the following command:
+docker run -p 8080:8080 springboot-pollapp
+
+### Testing the API
+We tested the API endpoints using Bruno (an API client similar to Postman) and the browser. The API exposes endpoints for managing polls, users, votes, and vote options. Here's an example of how to interact with the API:
+
+## Example Request: Creating a Vote Option
+
+![screenshot2](https://github.com/user-attachments/assets/6364f8f9-f4fa-47b4-bc09-96cbb16296a7)
+
+
+
+
+
 
