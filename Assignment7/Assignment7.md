@@ -158,6 +158,7 @@ We tested the API endpoints using Bruno (an API client similar to Postman) and t
 
 ![screenshot2](https://github.com/user-attachments/assets/6364f8f9-f4fa-47b4-bc09-96cbb16296a7)
 
+![screenshot3](https://github.com/user-attachments/assets/916fbe0f-0bb3-4ff1-9047-7fc5d5955d0d)
 
 
 
